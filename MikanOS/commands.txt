@@ -1,0 +1,20 @@
+
+ source $HOME/osbook/devenv/buildenv.sh
+
+ export QEMU_OPTS="-s"
+
+  find ./ -name "*.o" | xargs rm
+
+ ./build.sh run
+
+
+ gdb -x gdb_init
+
+
+  grep "(anonymous namespace)::IntHandler" o2_kernel_objdump_demangle | grep -E ':$' | cut -d " " -f 1
+
+  readelf -S uthread1
+
+  objdump -d -M intel -S -C kernel/kernel.elf >> o0_kernel_objdump_demangle
+
+  x/10gx $rsp
