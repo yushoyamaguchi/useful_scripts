@@ -1,7 +1,7 @@
 
  source $HOME/osbook/devenv/buildenv.sh
 
- export QEMU_OPTS="-s"
+ export QEMU_OPTS="-s -S"
 
   find ./ -name "*.o" | xargs rm
 
